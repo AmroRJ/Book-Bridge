@@ -1,0 +1,174 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container{
+  height: 100%;
+  width: 250px;
+  position: absolute;
+  background: #74644ea8;
+  z-index: 1;
+  transition: 0.5s ease;
+  transform: translateX(-250px);
+}
+
+.container .head{
+  color: rgba(32, 19, 22, 0.819);
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  background: linear-gradient(30deg,#74644ea8,#decec7);
+}
+
+ol{
+  width: 100%;
+  list-style: none;
+}
+
+ol li{
+  display: block;
+  width: 100%;
+}
+
+ol li a{
+  color: rgb(0, 0, 0);
+  padding: 15px 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+ol li a i{
+  width: 70px;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+}
+
+ol li:hover a{
+  background:  rgba(202, 153, 125, 0.664);
+  color: rgba(32, 19, 22, 0.819);
+  letter-spacing: 5px;
+}
+
+.logout-tab{
+  margin-top: 280px;
+
+}
+
+input{
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+span{
+  position: absolute;
+  right: -35px;
+  top: 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  color: beige;
+  padding: 2px 6px;
+  cursor: pointer;
+  background: #000;
+}
+
+#bars{
+  background: #000;
+}
+
+#check:checked ~ .container{
+  transform: translateX(0);
+}
+
+#check:checked ~ .container #bars{
+  display: none;
+}
+
+section{
+  min-height: 100vh;
+  background: url('wood.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  filter: brightness(60%);
+}
+
+.dashboard .top .sidebar-toggle{
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.text{
+  text-align: center;
+}
+
+.dashboard .dash-content{
+  padding-top: 50px;
+}
+.dash-content .title{
+  display: flex;
+  align-items: center;
+  margin: 60px 0 30px 0;
+}
+.dash-content .title i{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  color: var(--title-icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.dash-content .title .text{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+
+.dash-content{
+  text-align: center;
+}
+
+.move-icon{
+  text-align: center;
+  margin: auto;
+  height:30px;
+  border:none;
+}
+
+.move-button{
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: bold;
+  border:none;
+  border-radius: 45px;
+  background-color:  rgba(202, 153, 125, 0.664);
+  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 100px;
+  padding-left:130px;
+  padding-right:130px;
+  padding-top: 15px;
+  padding-bottom: 15px ;
+  cursor: pointer;
+}

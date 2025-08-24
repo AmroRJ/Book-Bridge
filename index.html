@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="sidebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>
+  </title>
+</head>
+
+<body>
+  
+  <input type="checkbox" name="" id="check">
+  <div class = "container">
+    <label for="check">
+      <span class="fas fa-times" id="times"></span>
+      <span class="fas fa-bars" id="bars"></span>
+    </label>
+    <div class = "head">DASHBOARD</div>
+    <ol>
+      <li><a href="donor.html" target="_blank"><i class="fas fa-donate"></i>Donor</a></li>
+      <li><a href="recipient.html" target="_blank"><i class="fas fa-handshake"></i>Recipient</a></li>
+      <li><a href="Location Page.html" target="_blank"><i class="fas fa-location-dot"></i>Location</a></li>
+      <li><a href="Contact Page.html" target="_blank"><i class="fas fa-phone"></i>Contact</a></li>
+      
+      <div>
+        <li><a href="Contact Page.html" target="_blank" class="logout-tab"><i class="fas fa-right-to-bracket"></i>Login</a></li>
+      </div>
+      
+      
+    </ol>
+
+  </div>
+<section class="dashboard">
+  <div class="top">
+    <i class="uil uil-bars sidebar-toggle"></i>
+
+  <div class="dash-content">
+    <div class="overview">
+        <div class="title">
+            <i class="uil uil-tachometer-fast-alt"></i>
+            
+        </div>        
+            <button onclick="window.location.href = 'donor.html';" class="move-button"><img src="493411.png " class="move-icon">
+                <br>DONATE
+            </button>            
+            <button onclick="window.location.href = 'recipient.html';" class="move-button"><img src="heart.png" class="move-icon">
+                <br>RECIEVE
+            </button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

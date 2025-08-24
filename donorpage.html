@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> BOOK BRIDGE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Donor Page</title>
+    <style>
+        body{
+            background-image: url('books1.jpg');
+            background-repeat: no-repeat ;
+            background-size:cover;
+            background-position: center;
+            position: center;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+        }
+
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;" class="header1">DONOR PAGE</h1>
+    
+ 
+    <form id="donorForm">
+        <!-- Your form inputs and labels here -->
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Donor Page</title>
+            <style>
+                body {
+                    font-size: large;
+                    font-weight:bold;
+                    color:rgb(0, 0, 0);
+                    background-color:rgb(255, 255, 255);
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                header {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 1em;
+                    text-align: center;
+                }
+
+                .header1{
+                    background-color: #684646b6;
+                    color: #fff;
+                    padding: 1em;
+                    text-align: center;
+                    margin-left: 350px;
+                    margin-right: 350px ;
+                    border-radius: 10px;
+                
+
+                }
+    
+                form {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    background-color: rgb(232, 240, 227);
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 0.8em;
+                    color: rgb(110, 94, 67);
+
+
+                }
+        
+                input, select {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 16px;
+                    box-sizing: border-box;
+                    border: 1px solid  #040404;
+                    border-radius: 4px;
+
+
+                }
+        
+                button {
+                    background-color: rgb(110, 94, 67);
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: 1px solid;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    opacity: 1;
+
+                }
+        
+                button:hover {
+                    background-color:rgb(110, 94, 67);
+                }
+                
+            </style>
+        </head>
+        <body>
+        
+            <form id="donorForm">
+                <label for="donorName">Donor Name:</label>
+                <input type="text" id="donorName" name="donorName" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="Book Name">Book Name:</label>
+                <input type="text" id="booktobedonated" name="Book to be donated" min="1" required>
+
+                <label for="Author">Author:</label>
+                <input type="text" id="author" name="Author" min="1" required>
+        
+                <label for="BookType">Book Type:</label>
+                <select id="dropdown">
+                    <option value="option1">Programming</option>
+                    <option value="option2" selected>Educational</option>
+                    <option value="option3">Fiction</option>
+                    <option value="option4">History</option>
+                    <option value="option5">Biography</option>
+                    <option value="option6">Poetry</option>
+                    <option value="option7">Politics</option>
+                    <option value="option8">Other</option>
+            </select>
+                   
+
+        <label for="Location">Location:</label>
+        <select id="dropdown">
+            <option value="option1">Indore</option>
+            <option value="option2" selected>Bhopal</option>
+            <option value="option3">Mumbai</option>
+            <option value="option4">Banglore</option>
+            <option value="option5">Chennai</option>
+            <option value="option6">Ernakulam</option>
+            <option value="option7">Trivandrum</option>
+    </select>
+       
+
+        <button type="button" onclick="submitDonation()">Make Donation</button>
+    </form>
+
+    <script>
+        function getlocation() {
+            var x = document.getElementById("location");
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+            function showPosition(position) {
+                // Add more locations dynamically
+                var locations = [
+                    { value: "option1", text: "option1" },
+                    { value: "option2", text: "option2" },
+                    { value: "option3", text: "option3" }
+                    // Add more locations as needed
+                ];
+
+                // Clear existing options
+                x.innerHTML = "";
+
+                // Add the default option
+                var defaultOption = document.createElement("option");
+                defaultOption.value = "";
+                defaultOption.text = "Select your location";
+                defaultOption.disabled = true;
+                defaultOption.selected = true;
+                x.appendChild(defaultOption);
+
+                // Add the new locations
+                locations.forEach(function (location) {
+                    var option = document.createElement("option");
+                    option.value = location.value;
+                    option.text = location.text;
+                    x.appendChild(option);
+                });
+                // Update the displayed coordinates
+                x.nextElementSibling.innerHTML = "Latitude: " + position.coords.latitude +
+                    "<br>Longitude: " + position.coords.longitude;
+            }
+        }
+            
+            
+        
+
+        function submitDonation() {
+            // You can add more complex logic here, such as sending the donation information to a server.
+            alert("Thank you for your donation!");
+            document.getElementById("donorForm").reset();
+        }
+    </script>
+</body>
+
+</html>
